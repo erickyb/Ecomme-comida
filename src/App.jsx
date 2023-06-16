@@ -1,6 +1,11 @@
-function App() {
+import Sidebar from "./components/Sidebar"
 
-  return <div className="bg-red-400">Go erick</div>
+function App() {
+  return (
+    <div className="bg-[#262837] w-full min-h-screen">
+      <Sidebar />
+    </div>
+  )
 }
 
 export default App
