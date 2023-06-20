@@ -94,7 +94,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="/public/Yarleque.jpg"
+                src="Yarleque.jpg"
                 alt="mi foto"
                 className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
@@ -106,7 +106,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="/public/Yarleque.jpg"
+                src="Yarleque.jpg"
                 alt="mi foto"
                 className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
@@ -118,7 +118,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="/public/Yarleque.jpg"
+                src=""
                 alt="mi foto"
                 className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
