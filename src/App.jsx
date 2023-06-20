@@ -94,7 +94,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto1" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -104,7 +104,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto2" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -114,7 +114,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto3" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -124,7 +124,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto4" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -134,7 +134,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto5" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -144,7 +144,7 @@ function App() {
             {/* card */}
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
-                src="Yarleque.jpg" alt="mi foto" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
+                src="Yarleque.jpg" alt="mi foto6" className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
               <span className="text-gray-400">$2.29</span>
@@ -155,7 +155,7 @@ function App() {
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
                 src="Yarleque.jpg"
-                alt="mi foto"
+                alt="mi foto7"
                 className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
@@ -167,7 +167,7 @@ function App() {
             <div className="bg-menu-color p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
               <img
                 src="Yarleque.jpg"
-                alt="mi foto"
+                alt="mi foto8"
                 className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
               />
               <p className="text-xl">Speacy seasoned seafood nodles</p>
