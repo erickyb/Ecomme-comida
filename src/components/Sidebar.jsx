@@ -68,10 +68,19 @@ import {
 // @tailwind utilities;
 
 
+
+//?crear estilos para reutilizar  
+
+const sidebarBtn = "group-hover:bg-primary-color p-4 flex justify-center rounded-xl text-primary-color group-hover:text-white transition-colors";
+
+const sidebarLiBtn = "hover:bg-secondary-color p-4 rounded-tl-xl rounded-bl-xl group transition-colors"
+
+
+
 const sidebar = (props) => {
   const { showMenu } = props;
   return (
-    <div className={`bg-[#1f1d2b] fixed lg:left-0 top-0 w-28 h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl z-50 transition-all ${showMenu ? "left-0" : "-left-full"
+    <div className={`bg-menu-color fixed lg:left-0 top-0 w-28 h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl z-50 transition-all ${showMenu ? "left-0" : "-left-full"
       }`
     }>
       <div>
@@ -81,50 +90,49 @@ const sidebar = (props) => {
               logo
             </h1>
           </li>
-          <li className='bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl'>
+          <li className='bg-secondary-color p-4 rounded-tl-xl rounded-bl-xl'>
             <a
               href="#"
-              className='bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-white'>
+              className='bg-primary-color p-4 flex justify-center rounded-xl text-white'>
               <RiHome3Line className='text-2xl' />
             </a>
           </li>
 
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='group-hover:bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-[#ec7c6a] group-hover:text-white transition-colors'>
+              className={sidebarBtn}>
               <RiCreativeCommonsZeroLine className='text-2xl' />
             </a>
           </li>
 
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='group-hover:bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-[#ec7c6a] group-hover:text-white transition-colors'>
+              className={sidebarBtn}>
               <RiPieChartLine className='text-2xl' />
             </a>
           </li>
 
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='group-hover:bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-[#ec7c6a] group-hover:text-white transition-colors'>
+              className={sidebarBtn}>
               <RiMailLine className='text-2xl' />
             </a>
           </li>
-
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='group-hover:bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-[#ec7c6a] group-hover:text-white transition-colors'>
+              className={sidebarBtn}>
               <RiNotification2Line className='text-2xl' />
             </a>
           </li>
 
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='group-hover:bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-[#ec7c6a] group-hover:text-white transition-colors'>
+              className={sidebarBtn}>
               <RiSettings2Line className='text-2xl' />
             </a>
           </li>
@@ -133,10 +141,10 @@ const sidebar = (props) => {
 
       <div>
         <ul className='pl-4'>
-          <li className='hover:bg-[#262837] p-4 rounded-tl-xl rounded-bl-xl group transition-colors'>
+          <li className={sidebarLiBtn}>
             <a
               href="#"
-              className='bg-[#ec7c6a] p-4 flex justify-center rounded-xl text-white'>
+              className={sidebarBtn}>
               <RiLogoutCircleRLine className='text-2xl' />
             </a>
           </li>
