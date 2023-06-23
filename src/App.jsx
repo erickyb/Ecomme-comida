@@ -17,6 +17,12 @@ function App() {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    setShowOrder(false);
+  };
+
+  const toggleOrders = () => {
+    setShowOrder(!showOrder);
+    setShowMenu(false);
   };
   // crear una clase
 
@@ -34,7 +40,7 @@ function App() {
           <RiAddLine />
         </button>
 
-        <button className="p-2">
+        <button onClick={toggleOrders} className="p-2">
           <RiPieChartLine />
         </button>
 
@@ -176,16 +182,16 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-2 fixed lg:static right-0 top-0 bg-menu-color w-full h-full">
-          <div className="relative pt-16 text-gray-300 p-8 ">
-            <RiCloseLine className="absolute left-4 top-4 p-3 box-content text-gray-300 bg-secondary-color rounded-full text-xl" />
+        <div className={`lg:col-span-2 fixed lg:static right-0 top-0 bg-menu-color w-full h-full transition-all ${showOrder ? "right-0" : "right-full"}`}>
+          {/* orders */}
+          <div className="relative pt-16 text-gray-300 p-8 h-full overflow-y-scroll ">
+            <RiCloseLine onClick={toggleOrders} className="absolute left-4 top-4 p-3 box-content text-gray-300 bg-secondary-color rounded-full text-xl" />
             <h1 className="text-2xl my-4">Orders #151416</h1>
             {/* Pills */}
             <div className="flex items-center gap-4 flex-wrap">
               <button className="bg-primary-color text-white py-2 px-4 rounded-xl">
                 Dine In
               </button>
-
               <button className={classBtn}>
                 To Go
               </button>
@@ -201,40 +207,279 @@ function App() {
                 <h5>Qty</h5>
                 <h5>Price</h5>
               </div>
-              {/* Product */}
-              <div className="bg-secondary-color p-4 rounded-xl">
-                <div className="grid grid-cols-6 mb-2">
-                  {/* Product description */}
-                  <div className="col-span-4 flex items-center gap-3">
-                    <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+              {/* Products */}
+              <div className=" h-[400px] overflow-scroll">
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4 ">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
                     <div>
-                      <h5 className="text-sm">Spaicy seaso...</h5>
-                      <p className="text-xs text-gray-500">$2.29</p>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
                     </div>
                   </div>
-                  {/* Qty */}
-                  <div>
-                    <span>2</span>
-                  </div>
-                  {/* price */}
-                  <div>
-                    <span>$4.58</span>
-                  </div>
-                </div>
-                {/* Note */}
-                <div className="grid grid-cols-6 items-center gap-2">
-                  <form className="col-span-4 " >
-                    <input
-                      type="text"
-                      className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
-                      placeholder="Order note..." />
-                  </form>
-                  <div className="col-span-2 text-center">
-                    <button className="border border-red-500 p-2 rounded-lg">
-                      <RiDeleteBin6Line className="text-red-500" />
-                    </button>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
                   </div>
                 </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product */}
+                <div className="bg-secondary-color p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src="Yarleque.jpg" className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">Spaicy seaso...</h5>
+                        <p className="text-xs text-gray-500">$2.29</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>2</span>
+                    </div>
+                    {/* price */}
+                    <div>
+                      <span>$4.58</span>
+                    </div>
+                  </div>
+                  {/* Note */}
+                  <div className="grid grid-cols-6 items-center gap-2">
+                    <form className="col-span-5 " >
+                      <input
+                        type="text"
+                        className="py-2 px-4 rounded-lg outline-none bg-menu-color w-full"
+                        placeholder="Order note..." />
+                    </form>
+                    <div className="col-span-1 text-center">
+                      <button className="border border-red-500 p-2 rounded-lg">
+                        <RiDeleteBin6Line className="text-red-500" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+
+            </div>
+            {/* submit payment */}
+            <div className="bg-secondary-color absolute w-full bottom-0 left-0 p-4">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-gray-400">Discount</span>
+                <span>$0</span>
+              </div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-gray-400">Subtotal</span>
+                <span>$201.03</span>
+              </div>
+              <div>
+                <button className="bg-primary-color w-full py-2 px-4 rounded-lg">Continue to payment</button>
               </div>
             </div>
           </div>
